@@ -132,10 +132,14 @@
     }
 
     #logo {
-        margin-top: 10rem;
-        width: 100%;
-        margin-left: 0px;
-        text-align: center;
+        margin-top: 26rem;
+        width: 215px;
+        margin-left: 40px;
+        /*text-align: center;*/
+    }
+
+    #logo h1, #logo h1 span {
+        font-size: 20px;
     }
 
     #menuNavSmallScreens{
@@ -168,11 +172,10 @@
 #about {
     /* border: 2px solid violet; */
     background-color: black;
+    padding: 30px auto;
     opacity: 0.9;
-    /* width: 80%; */
     height: 750px;
     min-height: fit-content;
-    margin: 0px auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -216,8 +219,12 @@
 
 @media only screen and (max-width: 1080px) {
     #about {
-    padding: 20px 30px;
-}
+        padding: 30px 30px 60px;
+        height: fit-content;
+    }
+    #profil img {
+        margin: 30px auto 30px;
+    }
     #aboutTxt h2 {
         text-align: center;
     }
@@ -229,8 +236,7 @@
     /* border: 2px solid black; */
     height: 750px;
     min-height: fit-content;
-    /* width: 80%; */
-    margin: 0px auto;
+    padding: 30px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -238,7 +244,7 @@
 
 #encartTours {
     /* border: 1px solid pink; */
-    padding: 0px 30px;
+    margin-top: 30px;
     text-align: center;
 }
 
@@ -269,6 +275,7 @@
     /* border: 1px solid brown; */
     text-align: center;
     box-shadow: 0 20px 30px rgba(0,0,0,.1);
+    margin-bottom: 30px;
 }
 
 .tour img {
@@ -315,31 +322,36 @@
     box-shadow: inset 0.1em 0.1em rgba(0,0,0,.1);
 }
 
+@media only screen and (max-width: 1080px) {
+    #Tours {
+        height: fit-content;
+    }
+}
+
 /* MY SERVICES SECTION */
 
 #myServices {
     /* border: 2px solid black; */
-    /*width: 80%;*/
     background-color: azure;
-    height: 750px;
-    min-height: fit-content;
-    margin: 0px auto;
+    min-height: 750px;
+    height: fit-content;
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
 }
 
 #encartServices {
     /* border: 1px solid pink; */
-    
+    margin: 30px 20px 0px;
     text-align: center;
 }
 
 #encartServices h2 {
     color: black;
+    padding: 20px;
     font-size: 26px;
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: 0.5em;
-    padding: 20px 0;
 }
 
 #encartServices p {
@@ -402,33 +414,33 @@
     box-shadow: inset 0.1em 0.1em rgba(0,0,0,.1);
 }
 
+@media only screen and (max-width: 1080px) {
+    #myServices {
+        height: fit-content;
+    }
+}
+
 /* GALLERY SECTION */
 
 #gallery {
     /*border: 2px solid black;*/
-    /* width: 80%; */
-    height: 750px;
-    min-height: fit-content;
-    margin: 0px auto;
+    height: min-content;
     display: flex;
     flex-direction: column;
 }
 
 #encartGallery {
     /* border: 1px solid pink; */
+    margin-top: 40px;
     text-align: center;
 }
-
-#encartGallery img {
-    /* Aligner le logo au centre */
-   }
 
 #encartGallery h2 {
     color: black;
     font-size: 26px;
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: 0.5em;
-    padding: 20px 0;
+    padding: 20px;
 }
 
 #encartGallery p {
@@ -471,18 +483,21 @@
 
 #contact {
     /* border: 2px solid black;*/
+    margin-top: 5px;
+    padding-top: 30px;
     height: 750px;
     background-image: url('./images/footerIllustration.jpg');
     background-repeat:no-repeat;
     background-size: cover;
     background-position: center;
-    margin: 0px auto;
     display: flex;
     flex-direction: column;
+    z-index : 2;
 }
 
 #encartContact {
     /* border: 1px solid pink; */
+    margin-top: 40px;
     text-align: center;
 }
 
@@ -515,6 +530,7 @@
     color: white;
     font-size: 60px;
     border: none;
+    text-decoration: none; /*Enlève le soulignement automatique qui s'affiche sous les icones Fb et Insta qui sont des liens a */
 }
 
 footer {
