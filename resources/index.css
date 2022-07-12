@@ -1,0 +1,529 @@
+/* GLOBAL */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif, cursive;
+}
+
+/* TOP CONTAINER */
+#containerTop {
+    /* border: 2px solid red; */
+    background-image: url('./images/Nice_Home.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+}
+
+/* HEADER */
+
+#header {
+    /* border: 1px solid black; */
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    /*position: fixed;*/
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Align items car on agit sur les items du flex container header */
+    z-index:10;
+}
+
+#logo {
+    /* border: 1px solid yellow; */
+    /* margin-top: 10rem; */
+    margin-top: 26rem;
+    margin-left: 10rem;
+    text-align:left;
+    width: 380px;
+}
+
+#logo h1, #logo h1 span {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    font-size: 2.2rem;
+}
+
+#menuNav {
+    /*border: 1px solid yellow;*/
+}
+
+#menuNav ul li {
+    /*border: 1px solid green;*/
+    display: inline;
+    margin-right: 80px;
+    font-size: 20px;
+}
+
+#menuNav a {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#containerTop a  {
+    color: white;
+    text-decoration: none;
+}
+
+/* Icones Awesome Font */
+#containerTop .fa {
+    color: white;
+    margin-right: 80px;
+    font-size: 20px;
+}
+
+
+/* Header for small screens */
+
+#menuNavSmallScreens, #socialIcons{
+    display: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.buttonMenu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonMenu img {
+    height: 35px;
+    width: auto;
+}
+
+.dropdown-child {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 50px;
+}
+
+.dropdown-child a {
+    color: white;
+    margin-top: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+@media only screen and (max-width: 1080px) {
+    #header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #logo {
+        margin-top: 10rem;
+        width: 100%;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    #menuNavSmallScreens{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .socialIcons {
+        display: block;
+    }
+
+    .socialIcons a{
+        margin-right: 3rem;
+        font-size: 20px;
+    }
+
+    #menuNav{
+        display: none;
+    }
+}
+
+/* ABOUT ME SECTION */
+
+/* .spacer {
+    border: 1px solid black;
+    margin: 30px auto;
+} */
+
+#about {
+    /* border: 2px solid violet; */
+    background-color: black;
+    opacity: 0.9;
+    /* width: 80%; */
+    height: 750px;
+    min-height: fit-content;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+#profil {
+    /* border: 1px solid green; */
+}
+
+#profil img {
+    margin: 100px 30px 66px; /*ou padding*/
+    height: 300px;
+    width: auto;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+#aboutTxt {
+    width: 50rem;
+}
+
+#aboutTxt h2 {
+    color: white;
+    font-size: 26px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0.5em;
+    padding: 20px 0;
+}
+
+#aboutTxt p{
+    /* border: 1px solid yellow; */
+    font-family: 'Raleway', sans-serif;
+    text-align: justify;
+    line-height: 1.5;
+    letter-spacing: 1.2px;
+    color: white;
+    z-index:3;
+}
+
+@media only screen and (max-width: 1080px) {
+    #about {
+    padding: 20px 30px;
+}
+    #aboutTxt h2 {
+        text-align: center;
+    }
+}
+
+/* TOURS SECTION */
+
+#Tours {
+    /* border: 2px solid black; */
+    height: 750px;
+    min-height: fit-content;
+    /* width: 80%; */
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#encartTours {
+    /* border: 1px solid pink; */
+    padding: 0px 30px;
+    text-align: center;
+}
+
+#encartTours h2 {
+    color: black;
+    font-size: 26px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0.5em;
+    padding: 20px 0;
+}
+
+#encartTours p {
+    color: black;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    padding-bottom: 20px;
+}
+
+#toursListe {
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.tour {
+    /* border: 1px solid brown; */
+    text-align: center;
+    box-shadow: 0 20px 30px rgba(0,0,0,.1);
+}
+
+.tour img {
+    height: 250px;
+    width: 250px;
+}
+
+.tour h2 {
+    line-height: 2;
+    color: rgb(99, 194, 202);
+}
+
+.tour h3 {
+    line-height: 2;
+}
+
+.tour p {
+    line-height: 1.6;
+    color: gray;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+
+}
+
+.button {
+    margin-top: 20px;
+    padding: 10px 10px;
+    background-color: rgb(72, 118, 147);
+}
+
+.tour a {
+    color: white;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: white;
+    color: rgb(72, 118, 147);
+    border: 1px solid rgb(72, 118, 147);
+    box-shadow: inset 0.1em 0.1em rgba(0,0,0,.1);
+}
+
+/* MY SERVICES SECTION */
+
+#myServices {
+    /* border: 2px solid black; */
+    /*width: 80%;*/
+    background-color: azure;
+    height: 750px;
+    min-height: fit-content;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#encartServices {
+    /* border: 1px solid pink; */
+    
+    text-align: center;
+}
+
+#encartServices h2 {
+    color: black;
+    font-size: 26px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0.5em;
+    padding: 20px 0;
+}
+
+#encartServices p {
+    color: black;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    padding-bottom: 20px;
+}
+
+#servicesListe {
+    /*border: 1px solid green;*/
+    background-color: rgba(99, 194, 202, 0.6);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.service {
+    width: 250px;
+    margin: 20px 0;
+    background-color: white;
+    border: 1px solid rgb(72, 118, 147);
+    box-shadow: 0 20px 30px rgba(0,0,0,.1);
+}
+
+.logo_couleur {
+    margin-top: 20px;
+    height: 70px;
+    width: auto;
+   }
+
+.service h3 {
+    color: rgb(99, 194, 202);
+    line-height: 2;
+}
+
+.service p {
+    padding: 15px 20px;
+}
+
+#more {
+    display: none;
+}
+
+/* Bouton Read More et Read Less, voir Javascript aussi */
+#myBtn {
+    margin: 20px auto;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: rgb(72, 118, 147);
+    color: white;
+}
+
+#myBtn:hover {
+    background-color: white;
+    color: rgb(72, 118, 147);
+    border: 1px solid rgb(72, 118, 147);
+    box-shadow: inset 0.1em 0.1em rgba(0,0,0,.1);
+}
+
+/* GALLERY SECTION */
+
+#gallery {
+    /*border: 2px solid black;*/
+    /* width: 80%; */
+    height: 750px;
+    min-height: fit-content;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#encartGallery {
+    /* border: 1px solid pink; */
+    text-align: center;
+}
+
+#encartGallery img {
+    /* Aligner le logo au centre */
+   }
+
+#encartGallery h2 {
+    color: black;
+    font-size: 26px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0.5em;
+    padding: 20px 0;
+}
+
+#encartGallery p {
+    color: black;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    padding-bottom: 20px;
+}
+
+#photoListe {
+    /* Disposition ici des images en grid */
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat (4, 1fr);
+    grid-template-rows: repeat (4, 1fr);
+}
+
+.photoGallery img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Meme fonctionnement ici que pour les background image. Pour conserver les dimensions */
+}
+
+#photoListe .item1 {
+    grid-column: 1 / span 2; 
+    grid-row: 1 / span 2;
+}
+
+#photoListe .item2 {
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 2;
+}
+
+#photoListe .item7 {
+    grid-column: 1 / 1; 
+    grid-row: 3 / span 2;
+}
+
+/* CONTACT */
+
+#contact {
+    /* border: 2px solid black;*/
+    height: 750px;
+    background-image: url('./images/footerIllustration.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#encartContact {
+    /* border: 1px solid pink; */
+    text-align: center;
+}
+
+#encartContact h2 {
+    color: white;
+    font-size: 26px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0.5em;
+    padding: 20px 0;
+}
+
+#encartContact p {
+    color: white;
+    font-size: 17px;
+    font-family: 'Courier New', Courier, monospace;
+    padding-bottom: 20px;
+}
+
+#contactsListe {
+    /* border: 1px solid red; */
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#contactsListe .fa {
+    color: white;
+    font-size: 60px;
+    border: none;
+}
+
+footer {
+    border: 1px solid yellow;
+    background-color: transparent;
+    position: fixed;
+}
+
+footer p {
+    color: white;
+    font-size: 16px;
+}
